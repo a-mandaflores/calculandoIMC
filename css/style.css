@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    
+    
+}
+
+
+body{
+    background: linear-gradient(43deg, #4158D0, #C850C0, #FFCC70);
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;       
+}
+
+::selection{
+    background: #C850C0;
+    color: white;
+}
+.container{
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 50px;
+    height: 330px;
+    position: relative;
+    ;
+    
+}
+.resultado{
+    display: flex;
+    background: linear-gradient(43deg, #4158D0, #C850C0);
+    height: 100px;
+    position: relative;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: normal;
+    
+}
+
+
+.container h1{
+    font-weight: 600;
+    color: #544e4e;
+    font-size: 150%;
+    padding: 1rem;
+    margin-top: -30px;    
+}
+.container .calcular{
+    height: 50px;
+    width: 100%;
+    margin-top: 20%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #24368f, #a3239b);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.container .calcular:hover {
+    background: linear-gradient(90deg, #a3239b,#24368f);
+}
+
+.container-informacoes input{
+    height: 10px;    
+    width: 100%;
+    margin-top: 10%;
+    outline: none;
+    font-size: 0.8rem;
+    border: auto;   
+    
+}
+
+.container input::placeholder{
+    width: 100%;
+    padding: 0.1rem;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(138, 137, 137);
+    font-size: 0.8rem;
+
+}
+.container-input{
+    position: relative;
+}
+.container-input .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;  
+    left: 0;
+    background:rgba(0, 0, 0, 0.2);
+}
+.container-input .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;  
+    left: 0;
+    background: linear-gradient(90deg, #24368f, #a3239b);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+    
+
+}
+.container-input input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
